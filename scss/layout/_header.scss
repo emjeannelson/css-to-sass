@@ -1,0 +1,9 @@
+/* =========================
+Header Container
+========================= */
+
+.main-header {
+	@extend %container-padding;
+	background-color: $mountain-meadow;
+	color: $white;
+}

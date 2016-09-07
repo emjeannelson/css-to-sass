@@ -1,0 +1,19 @@
+/* =========================
+Images
+========================= */
+
+.intro img {
+	width: 60%;
+	margin-bottom: $space-beneath;
+	border-radius: $img_br;
+
+  @include box-shadow (4px, 4px, 4px, rgba($black, .25));
+
+  @include tablet {
+    width: 40%;
+    float: right;
+		margin-right: 1.6em;
+    margin-bottom: 1.6em;
+		margin-left: 2.4em;
+  }
+}

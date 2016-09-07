@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-main;
+	line-height: 1.6;
+	text-align: center;
+
+	@include desktop {
+		background-color: $mountain-meadow;
+	}
+}
+
+p,
+h1,
+h2,
+h3,
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+a {
+	text-decoration: none;
+	color: $white;
+		&:hover {
+			color: $apple_blossom;
+		}
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+h2,
+nav li {
+	text-transform: uppercase;
+}

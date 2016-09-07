@@ -1,0 +1,108 @@
+/* =========================
+Page Text
+========================= */
+
+//Intro
+
+.intro {
+  color: $white;
+
+  p {
+	   margin-bottom: $space-beneath;
+
+    @include tablet {
+    font-size: $bigger-text;
+    padding-left: 16px;
+    text-align: left;
+    }
+  }
+}
+
+//Skills
+
+#skills {
+  color: $white;
+
+  h2 {
+  @extend %heading_padding;
+  }
+
+  p {
+	margin-bottom: $space-beneath;
+  font-size: $smaller-text;
+
+  @include tablet {
+    width: calc(60% - 2em);
+    font-size: $bigger-text;
+		float: left;
+		text-align: left;
+		padding-left: 16px;
+		margin-right: 1em;
+    }
+  }
+
+  ul {
+    @extend %centered;
+    font-size: $smaller-text;
+  	list-style: square inside;
+  	display: block;
+  	padding-bottom: 2em;
+
+    @include tablet {
+      width: 40%;
+      float: right;
+      text-align: left;
+      margin-left: 16px;
+    }
+  }
+
+  li {
+    padding-bottom: .4em;
+
+    @include tablet {
+      font-size: $bigger-text;
+    }
+  }
+}
+
+//Portfolio
+
+#portfolio h2 {
+	@extend %heading_padding;
+  color: $cape-cod;
+}
+
+//Contact
+
+#contact {
+  color: $white;
+
+  h2 {
+	@extend %heading_padding;
+  }
+
+  p {
+  @extend %centered;
+	font-size: $smaller-text;
+	padding-bottom: 1.6em;
+	width: 75%;
+
+  @include tablet {
+    font-size: $bigger-text;
+    }
+  }
+
+  .info {
+    padding-bottom: .8em;
+  }
+
+  a {
+    @extend %bold;
+  	color: $white;
+  	padding: .4em;
+
+    &:hover {
+      color: $apple_blossom;
+    }
+  }
+}

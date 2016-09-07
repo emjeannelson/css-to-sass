@@ -1,0 +1,11 @@
+/* =========================
+Footer Container
+========================= */
+
+.main-footer {
+	@extend %clearfix;
+	@extend %container-padding;
+	background-color: $mountain-meadow;
+	color: $white;
+	padding-bottom: 2.4em;
+}

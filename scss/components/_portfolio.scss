@@ -1,0 +1,25 @@
+/* =========================
+Portfolio Items
+========================= */
+
+.portfolio-item {
+
+	color: $cape-cod;
+
+	img {
+	width: 100%;
+	margin-bottom: $space-beneath;
+	}
+
+	h3 {
+	font-size: $bigger_text;
+	padding-bottom: .4em;
+	}
+
+	p {
+	@extend %centered;
+	font-size: $smaller-text;
+	padding-bottom: 2em;
+	width: 100%;
+	}
+}

@@ -1,0 +1,160 @@
+/* =========================
+Navigation
+========================= */
+
+//Header nav
+
+.main-nav ul {
+
+	margin-bottom: $space-beneath;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 50%;
+		margin: 0 auto;
+		flex-direction: row;
+		justify-content: space-between;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin-top: 2em;
+    padding-right: 1.6em;
+		justify-content: space-between;
+		align-items: flex-start;
+  }
+
+  li {
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    .material-icons {
+      font-size: 36px;
+      color: white;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &:not(.icon) {
+      display: none;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+
+    @include desktop {
+    margin-left: .8em;
+    font-size: $smaller-text;
+    align-items: flex-end;
+    }
+  }
+
+  a {
+    @extend %bold;
+  	display: block;
+  	padding: .5em;
+  	background-color: $white;
+  	color: $mountain-meadow;
+  	font-size: $smaller-text;
+  	margin-bottom: .4em;
+
+    @include tablet {
+      background-color: $mountain-meadow;
+      color: $white;
+    }
+
+    &:hover {
+      color: $apple-blossom;
+    }
+  }
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+  flex-direction: row;
+  margin: auto;
+  }
+}
+
+#name {
+
+  padding: 0.8em;
+
+  @include desktop {
+
+      padding: 16px;
+      margin-right: auto;
+  }
+}
+
+//Footer nav
+
+.bottom-name {
+  @extend %bold;
+	font-size: $bigger-text;
+	float: left;
+
+  @include tablet {
+    margin-right: auto;
+  }
+}
+
+.to-top {
+  @extend %bold;
+  color: $white;
+  font-size: $bigger-text;
+	text-transform: uppercase;
+	float: right;
+
+  @include tablet {
+    display: none;
+  }
+
+  &:hover {
+    color: $apple-blossom;
+  }
+}
+
+.large-footer-nav {
+	display: none;
+
+  @include tablet {
+    display: flex;
+    width: 50%;
+		flex-direction: row;
+		justify-content: space-between;
+  }
+
+	@include desktop {
+		width: 40%;
+	}
+
+  a {
+    @include tablet {
+      font-weight: bold;
+      color: $white;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      color: $apple-blossom;
+    }
+  }
+}
+
+.main-footer {
+  @include tablet {
+    display: flex;
+  }
+}

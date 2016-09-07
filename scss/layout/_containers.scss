@@ -1,0 +1,66 @@
+/* =========================
+Containers
+========================= */
+
+.intro,
+#contact {
+	@extend %container-padding;
+	background-color: $mountain-meadow;
+}
+
+.intro,
+#skills {
+		@extend %clearfix;
+}
+
+#skills,
+#portfolio {
+	@extend %container-padding;
+
+	@include desktop {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+#skills {
+	background-color: $cerulean;
+
+	@include desktop {
+		margin-bottom: 2em;
+	}
+}
+
+#portfolio {
+	background-color: $wild-sand;
+	margin-bottom: 0;
+}
+
+.portfolio-container {
+
+	@include tablet {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1em;
+	}
+
+	@include desktop {
+		margin: 0 1em;
+	}
+}
+
+.portfolio-item {
+	@include tablet {
+		width: calc(50% - 2em);
+		margin: 0 1em;
+	}
+
+	@include desktop {
+		width: calc(33% - 2em);
+	}
+}
+
+.contact hr {
+	margin-top: 2.4em;
+	border-color: rgba($white, .25);
+}

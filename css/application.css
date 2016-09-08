@@ -1,0 +1,347 @@
+/* =========================
+Global Imports
+========================= */
+/* =========================
+Modules Imports
+========================= */
+/* =========================
+Variables
+========================= */
+/* =========================
+Mix-Ins
+========================= */
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Lato, sans-serif;
+  line-height: 1.6;
+  text-align: center; }
+  @media (min-width: 1024px) {
+    body {
+      background-color: #16a085; } }
+
+p,
+h1,
+h2,
+h3,
+ul {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+  a:hover {
+    color: #AC5043; }
+
+ul {
+  list-style: none;
+  padding-left: 0; }
+
+h2,
+nav li {
+  text-transform: uppercase; }
+
+/* =========================
+Layout Imports
+========================= */
+/* =========================
+Header Container
+========================= */
+.main-header {
+  background-color: #16a085;
+  color: #fff; }
+
+/* =========================
+Footer Container
+========================= */
+.main-footer {
+  background-color: #16a085;
+  color: #fff;
+  padding-bottom: 2.4em; }
+
+/* =========================
+Containers
+========================= */
+.intro,
+#contact {
+  background-color: #16a085; }
+
+@media (min-width: 1024px) {
+  #skills,
+  #portfolio {
+    width: 95%;
+    margin: 0 auto; } }
+
+#skills {
+  background-color: #088DD3; }
+  @media (min-width: 1024px) {
+    #skills {
+      margin-bottom: 2em; } }
+
+#portfolio {
+  background-color: #f6f6f6;
+  margin-bottom: 0; }
+
+@media (min-width: 768px) {
+  .portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1em; } }
+@media (min-width: 1024px) {
+  .portfolio-container {
+    margin: 0 1em; } }
+
+@media (min-width: 768px) {
+  .portfolio-item {
+    width: calc(50% - 2em);
+    margin: 0 1em; } }
+@media (min-width: 1024px) {
+  .portfolio-item {
+    width: calc(33% - 2em); } }
+
+.contact hr {
+  margin-top: 2.4em;
+  border-color: rgba(255, 255, 255, 0.25); }
+
+/* =========================
+Layout Extends
+========================= */
+.main-header, .main-footer, .intro,
+#contact, #skills,
+#portfolio {
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  padding-bottom: 1.2em; }
+
+.main-footer:after, .intro:after,
+#skills:after {
+  content: " ";
+  display: table;
+  clear: both; }
+
+/* =========================
+Components Imports
+========================= */
+/* =========================
+Components Extends
+========================= */
+#skills h2, #portfolio h2, #contact h2 {
+  padding-top: 1.6em;
+  padding-bottom: 1.6em; }
+
+.main-nav ul a, .bottom-name, .to-top, #contact a {
+  font-weight: bold; }
+
+.portfolio-item p, #skills ul, #contact p {
+  margin: 0 auto; }
+
+/* =========================
+Navigation
+========================= */
+.main-nav ul {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 768px) {
+    .main-nav ul {
+      width: 50%;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media (min-width: 1024px) {
+    .main-nav ul {
+      width: 100%;
+      margin-top: 2em;
+      padding-right: 1.6em;
+      justify-content: space-between;
+      align-items: flex-start; } }
+  .main-nav ul li button {
+    background-color: transparent;
+    border: none;
+    outline: none; }
+  .main-nav ul li .material-icons {
+    font-size: 36px;
+    color: white; }
+    @media (min-width: 768px) {
+      .main-nav ul li .material-icons {
+        display: none; } }
+  .main-nav ul li:not(.icon) {
+    display: none; }
+    @media (min-width: 768px) {
+      .main-nav ul li:not(.icon) {
+        display: inline-block; } }
+  @media (min-width: 1024px) {
+    .main-nav ul li {
+      margin-left: .8em;
+      font-size: 1em;
+      align-items: flex-end; } }
+  .main-nav ul a {
+    display: block;
+    padding: .5em;
+    background-color: #fff;
+    color: #16a085;
+    font-size: 1em;
+    margin-bottom: .4em; }
+    @media (min-width: 768px) {
+      .main-nav ul a {
+        background-color: #16a085;
+        color: #fff; } }
+    .main-nav ul a:hover {
+      color: #AC5043; }
+
+.main-header {
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 1024px) {
+    .main-header {
+      flex-direction: row;
+      margin: auto; } }
+
+#name {
+  padding: 0.8em; }
+  @media (min-width: 1024px) {
+    #name {
+      padding: 16px;
+      margin-right: auto; } }
+
+.bottom-name {
+  font-size: 1.2em;
+  float: left; }
+  @media (min-width: 768px) {
+    .bottom-name {
+      margin-right: auto; } }
+
+.to-top {
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  float: right; }
+  @media (min-width: 768px) {
+    .to-top {
+      display: none; } }
+  .to-top:hover {
+    color: #AC5043; }
+
+.large-footer-nav {
+  display: none; }
+  @media (min-width: 768px) {
+    .large-footer-nav {
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      justify-content: space-between; } }
+  @media (min-width: 1024px) {
+    .large-footer-nav {
+      width: 40%; } }
+  @media (min-width: 768px) {
+    .large-footer-nav a {
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase; } }
+  .large-footer-nav a:hover {
+    color: #AC5043; }
+
+@media (min-width: 768px) {
+  .main-footer {
+    display: flex; } }
+
+/* =========================
+Images
+========================= */
+.intro img {
+  width: 60%;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); }
+  @media (min-width: 768px) {
+    .intro img {
+      width: 40%;
+      float: right;
+      margin-right: 1.6em;
+      margin-bottom: 1.6em;
+      margin-left: 2.4em; } }
+
+/* =========================
+Portfolio Items
+========================= */
+.portfolio-item {
+  color: #434e4e; }
+  .portfolio-item img {
+    width: 100%;
+    margin-bottom: 1em; }
+  .portfolio-item h3 {
+    font-size: 1.2em;
+    padding-bottom: .4em; }
+  .portfolio-item p {
+    font-size: 1em;
+    padding-bottom: 2em;
+    width: 100%; }
+
+/* =========================
+Page Text
+========================= */
+.intro {
+  color: #fff; }
+  .intro p {
+    margin-bottom: 1em; }
+    @media (min-width: 768px) {
+      .intro p {
+        font-size: 1.2em;
+        padding-left: 16px;
+        text-align: left; } }
+
+#skills {
+  color: #fff; }
+  #skills p {
+    margin-bottom: 1em;
+    font-size: 1em; }
+    @media (min-width: 768px) {
+      #skills p {
+        width: calc(60% - 2em);
+        font-size: 1.2em;
+        float: left;
+        text-align: left;
+        padding-left: 16px;
+        margin-right: 1em; } }
+  #skills ul {
+    font-size: 1em;
+    list-style: square inside;
+    display: block;
+    padding-bottom: 2em; }
+    @media (min-width: 768px) {
+      #skills ul {
+        width: 40%;
+        float: right;
+        text-align: left;
+        margin-left: 16px; } }
+  #skills li {
+    padding-bottom: .4em; }
+    @media (min-width: 768px) {
+      #skills li {
+        font-size: 1.2em; } }
+
+#portfolio h2 {
+  color: #434e4e; }
+
+#contact {
+  color: #fff; }
+  #contact p {
+    font-size: 1em;
+    padding-bottom: 1.6em;
+    width: 75%; }
+    @media (min-width: 768px) {
+      #contact p {
+        font-size: 1.2em; } }
+  #contact .info {
+    padding-bottom: .8em; }
+  #contact a {
+    color: #fff;
+    padding: .4em; }
+    #contact a:hover {
+      color: #AC5043; }
+
+/*# sourceMappingURL=application.css.map */

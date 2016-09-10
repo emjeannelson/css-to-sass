@@ -16,7 +16,7 @@
 		<h1 id="name">Emily Nelson</h1>
 		<nav class="main-nav">
 			<ul>
-				<li class="icon"><button><i class="material-icons">menu</i></button></li>
+				<li class="icon"><button><i class="material-icons menu">menu</i></button></li>
 				<li><a href="#name">Home</a></li>
 				<li><a href="#skills">Skills</a><li>
 				<li><a href="#portfolio">Portfolio</a></li>
@@ -130,8 +130,15 @@
 <script>
 	$(".icon").click(function(){
   	$("li:not(.icon)").toggle();
-});
+	});
 
+	$(window).resize(checkSize);
+
+	function checkSize(){
+		if ($(".menu").css("display") == "none") {
+			$("li:not(.icon)").show();
+		}
+	}
 </script>
 
 </body>
